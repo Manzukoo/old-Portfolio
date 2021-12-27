@@ -1,5 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: monospace;
+}
+
 body {
     background: #2a2a2a;
     color: #ddd8d8;
     font-family: "Source Sans Pro";
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.presentation {
+    margin-top: 1em;
+}
+
+.presentation .title {
+    font-size: 2em;
+    font-family: "Source Sans Pro";
+}
+
+.presentation .name {
+    font-family: "Source Code Pro";
+    position: relative;
+    border-bottom: black solid 2px;
+}
+
+.presentation .name::after,
+.presentation .name::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.presentation .name::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 2px;
+    height: 87%;
+    margin: auto 0;
+    background: black;
+    opacity: 100%;
+    animation: writing-bar-opacity .6s alternate infinite, writing-bar-move 4s .7s steps(21) forwards;
+}
+
+.presentation .name::before {
+    height: 110%;
+    content: '';
+    background: white;
+    animation: writing-text 4s .7s steps(21) forwards;
+}
+
+@keyframes writing-text {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes writing-bar-opacity {
+    to {
+        opacity: 10%;
+    }
+}
+
+@keyframes writing-bar-move {
+    to {
+        left: 100%;
+    }
 }
