@@ -17,16 +17,18 @@ body {
 
 .presentation {
     margin-top: 1em;
-}
-
-.presentation .title {
-    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .presentation .name {
     font-family: "Source Code Pro", Arial;
     position: relative;
     border-bottom: #ffffff36 solid 2px;
+    width: max-content;
+    margin: 0 auto;
 }
 
 .presentation .name::after,
@@ -80,24 +82,32 @@ body {
     font-size: 1.5em;
     text-align: center;
     position: relative;
+}
+
+.presentation .description .welcome-msg {
+    gap: .2px;
     display: flex;
     justify-content: center;
 }
 
-.presentation p{
+.presentation .description p{
     opacity: 0;
     position: relative;
     margin:0 3.4px;
 }
 
-.presentation .description p:first-child{
+.presentation .description .welcome-msg p:first-child{
     right: 100%;
-    animation: push-to-right 3.5s 4s forwards;
+    animation: push-to-right 4s 4s forwards;
 }
 
-.presentation .description p:last-child{
+.presentation .description .welcome-msg p:last-child{
     left: 100%;
-    animation: push-to-left 3.5s 4s forwards;
+    animation: push-to-left 4s 4s forwards;
+}
+
+.presentation .description .explication p {
+    animation: appear 6s 5s forwards;
 }
 
 @keyframes push-to-right {
@@ -132,4 +142,24 @@ body {
         opacity: 100%;
         left: 0%;
     }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+.presentation .arrow-down-content .fa-arrow-down::before {
+    font-size: 5em;
+    color: #b0b3b6;
+}
+
+.presentation .arrow-down-content {
+    margin: 2em auto;
+    opacity: 0;
+    animation: appear 6s 5s forwards;
 }
