@@ -152,14 +152,3 @@ body {
         opacity: 100%;
     }
 }
-
-.presentation .arrow-down-content .fa-arrow-down::before {
-    font-size: 5em;
-    color: #b0b3b6;
-}
-
-.presentation .arrow-down-content {
-    margin: 2em auto;
-    opacity: 0;
-    animation: appear 6s 5s forwards;
-}
