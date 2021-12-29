@@ -7,7 +7,7 @@
 body {
     background: #2a2a2a;
     color: #ddd8d8;
-    font-family: "Source Sans Pro";
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 .container {
@@ -24,7 +24,7 @@ body {
 }
 
 .presentation .name {
-    font-family: "Source Code Pro";
+    font-family: "Source Code Pro", Arial;
     position: relative;
     border-bottom: #ffffff36 solid 2px;
 }
@@ -73,5 +73,63 @@ body {
 @keyframes writing-bar-move {
     to {
         left: 100%;
+    }
+}
+
+.presentation .description {
+    font-size: 1.5em;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.presentation p{
+    opacity: 0;
+    position: relative;
+    margin:0 3.4px;
+}
+
+.presentation .description p:first-child{
+    right: 100%;
+    animation: push-to-right 3.5s 4s forwards;
+}
+
+.presentation .description p:last-child{
+    left: 100%;
+    animation: push-to-left 3.5s 4s forwards;
+}
+
+@keyframes push-to-right {
+    0%{
+        right: 100%;
+        opacity: 0;
+    }
+    5%{
+        opacity: 0;
+    }
+    15%{
+        opacity: 30%;
+    }
+    100%{
+        opacity: 100%;
+        right: 0%;
+    }
+}
+
+@keyframes push-to-left {
+    0%{
+        left: 100%;
+        opacity: 0;
+    }
+    5%{
+        opacity: 0;
+    }
+    15%{
+        opacity: 30%;
+    }
+    100%{
+        opacity: 100%;
+        left: 0%;
     }
 }
