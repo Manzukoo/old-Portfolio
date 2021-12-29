@@ -71,7 +71,6 @@ main {
     100% {
         width: 22ch;
     }
-
 }
 
 .presentation .description {
@@ -104,6 +103,22 @@ main {
 
 .presentation .description .explication p {
     animation: appear 6s 5s forwards;
+}
+
+.presentation .down-arrows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+    animation: appear 6s 5s forwards, arrow-pointing-down 6.5s 6s infinite;
+    margin-top: .5em;
+}
+
+.presentation .down-arrows .fa-chevron-down::before {
+    font-size: 2em;
+    color: black;
 }
 
 @keyframes push-to-right {
@@ -146,5 +161,23 @@ main {
     }
     to {
         opacity: 100%;
+    }
+}
+
+@keyframes arrow-pointing-down {
+    0% {
+        gap: 0;
+    }
+    30% {
+        gap: 6px;
+    }
+    60% {
+        gap: 0;
+    }
+    90% {
+        gap: 6px;
+    }
+    100% {
+        gap: 0;
     }
 }
