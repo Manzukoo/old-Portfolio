@@ -8,33 +8,47 @@ body {
     background: #2a2a2a;
     color: #ddd8d8;
     font-family: "Source Sans Pro", sans-serif;
+    height: 100vh;
+}
+
+main {
+    height: 100%s;
 }
 
 .container {
     display: flex;
     justify-content: center;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .presentation {
     margin-top: 1em;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
+}
+
+.presentation .text-content {
+    position: relative;
+    margin: auto 0;
 }
 
 .presentation .name {
     font-family: "Source Code Pro", Arial;
     position: relative;
     border-bottom: #ffffff36 solid 2px;
-    width: max-content;
+    height: max-content;
+    width: 0;
     margin: 0 auto;
+    animation: writing-text 4s .7s steps(22) forwards;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.presentation .name::after,
-.presentation .name::before {
+.presentation .name::after {
     content: "";
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     bottom: 0;
@@ -42,39 +56,20 @@ body {
 }
 
 .presentation .name::after {
-    content: '';
-    position: absolute;
-    left: 0;
+    left: 11ch;
     width: 2px;
     height: 87%;
     margin: auto 0;
     background: rgb(204, 204, 204);
     opacity: 100%;
-    animation: writing-bar-opacity .6s alternate infinite, writing-bar-move 4s .7s steps(21) forwards;
+    animation: writing-bar-opacity .6s alternate infinite, writing-bar-move 4s .7s steps(22) forwards;
 }
-
-.presentation .name::before {
-    height: 110%;
-    content: '';
-    background: #2a2a2a;
-    animation: writing-text 4s .7s steps(21) forwards;
-}
-
 @keyframes writing-text {
-    to {
-        left: 100%;
+    0% {
+        width: 0ch;
     }
-}
-
-@keyframes writing-bar-opacity {
-    to {
-        opacity: 10%;
-    }
-}
-
-@keyframes writing-bar-move {
-    to {
-        left: 100%;
+    100% {
+        width: 22ch;
     }
 }
 
