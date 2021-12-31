@@ -5,19 +5,33 @@
 }
 
 body {
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);    color: #ddd8d8;
+    background: #273036;
+    color: #ddd8d8;
     font-family: "Source Sans Pro", sans-serif;
     height: 100vh;
 }
 
-main {
+.wave {
+    position: absolute;
+    width: 100%;
     height: 100%;
+    background-image: url("./img/wave.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    left: 0;
+    top: 0;
 }
 
-.container {
+.projects-container {
+    position: relative;
+}
+
+.presentation-container {
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .presentation {
@@ -25,6 +39,8 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    width: 100%;
+    justify-content: center;
 }
 
 .presentation .text-content {
@@ -170,10 +186,6 @@ main {
 }
 
 @media screen and (max-width: 1440px){
-    body {
-        width: max-content;
-    }
-
     .presentation .text-content {
         margin-left: 2em;
     }
@@ -187,28 +199,10 @@ main {
     }
 }
 
-@media screen and (max-width: 1280px){
-    body {
-        width: 100%;
-    }
-
-    .presentation .text-content {
-        margin: 15% 0 0 3em;
-    }
-
-    .presentation .img-content {
-        margin: -35% 0 0 35%;
-    }
-}
-
 @media screen and (max-width: 1024px){
-    body {
-        width: 100%;
-        height: 100vh;
-    }
 
-    .presentation .img-content {
-        margin: 0 0 0 22em;
+    .presentation {
+        align-items: normal;
     }
 
     .presentation .img-content .welcome-img {
@@ -217,34 +211,12 @@ main {
 }
 
 @media screen and (max-width: 768px){
-    body {
-        width: 100vh;
-        height: 100vh;
+    .wave {
+        top: 5px
     }
 
-    .presentation {
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .presentation .text-content {
-        margin-left: 10em;
-    }
-    
-    .presentation .name {
-        font-size: 1.7em;
-    }
-
-    .presentation .description p {
-        font-size: .9em;
-    }
-
-    .presentation .img-content {
-        margin-left:  36.5em;
-    }
-
-    .presentation .img-content .welcome-img {
-        width: 500px;
+    .projects-container {
+        margin: 0;
     }
 }
 
@@ -268,21 +240,16 @@ main {
 
 @media screen and (max-width: 425px){
 
-    body {
-        width: 100%;
+    .presentation .name {
+        font-size: 1.6em;
+    }
+
+    .presentation .description p {
+        font-size: .9em;
     }
 
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.9em;
-    }
-
-    .presentation .text-content {
-        margin: 0;
-    }
-
-
-    .presentation .img-content {
-        margin: 0;
     }
 
     .presentation .img-content .welcome-img {
@@ -291,14 +258,6 @@ main {
 }
 
 @media screen and (max-width: 375px){
-
-    body {
-        width: 100%;
-    }
-    
-    .presentation .text-content{
-        margin: 3.5em 0;
-    }
 
     .presentation .name {
         font-size: 1.5em;
@@ -365,27 +324,12 @@ main {
 }
 
 @media screen and (min-width: 768px) and (min-height: 1024px){
-    body {
-        width: 100%;
-        height: 100vh;
-    }
-
-    .presentation {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .presentation .text-content {
-        margin: 10em auto 0 auto;
-        padding: 0;
-    }
-
     .presentation .name {
-        font-size: 2.3em;
+        font-size: 2.1em;
     }
 
     .presentation .description p {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     .presentation .down-arrows .fa-chevron-down::before {
@@ -408,5 +352,15 @@ main {
 
     .presentation .img-content {
         margin: 0 0 35% 0;
+    }
+}
+
+@media screen and (min-width: 1024px) and (min-height: 600px){
+    .presentation {
+        justify-content: center;
+    }
+
+    .presentation .img-content {
+        margin: 0 0 7% 0;
     }
 }
