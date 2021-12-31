@@ -11,6 +11,10 @@ body {
     height: 100vh;
 }
 
+main {
+    scroll-snap-type: y mandatory;
+}
+
 .wave {
     position: absolute;
     width: 100%;
@@ -20,18 +24,17 @@ body {
     background-position: bottom;
     left: 0;
     top: 0;
-}
-
-.projects-container {
-    position: relative;
+    scroll-snap-align: start;
 }
 
 .presentation-container {
+    scroll-snap-align: start;
     display: flex;
     justify-content: center;
     height: 100vh;
     position: relative;
     background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
 }
 
 .presentation {
@@ -41,6 +44,7 @@ body {
     align-items: center;
     width: 100%;
     justify-content: center;
+    z-index: 1000;
 }
 
 .presentation .text-content {
@@ -67,15 +71,6 @@ body {
     animation: writing-text 4s .7s steps(22) forwards;
     overflow: hidden;
     white-space: nowrap;
-}
-
-@keyframes writing-text {
-    0% {
-        width: 0ch;
-    }
-    100% {
-        width: 22ch;
-    }
 }
 
 .presentation .description {
@@ -122,6 +117,138 @@ body {
 .presentation .down-arrows .fa-chevron-down::before {
     font-size: 2em;
     color: black;
+}
+
+.projects-container {
+    display: flex;
+    align-items: center;
+    margin-top: 6em;
+    flex-direction: column;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.projects-container .title {
+    font-size: 4em;
+}
+
+.projects-container .projects-content {
+    margin: auto;
+    max-width: 800px;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.projects-container .projects {
+    position: relative;
+    width: inherit;
+    height: inherit;
+}
+
+.projects-container .project {
+    border: white solid;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    display: none;
+    transition: opacity .5s;
+    border-radius: 10px;
+}
+
+.projects-content .project-selector {
+    position: absolute;
+    top: 92.5%;
+}
+
+.projects-container .projects-content .project-selector a {
+    background: #667eea;
+    color: #273036;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    padding: 10px 17px;
+    text-decoration: none;
+    border-radius: 100%;
+}
+
+.projects-container .projects-content .project-selector a:hover {
+    background: #5469c5;
+}
+
+.projects-container .projects-content .project-selector a:active {
+    padding: 13px 20px;
+    transition: padding .2s;
+}
+
+.projects-container .project:target {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-container .text-content {
+    z-index: 1;
+    color: black;
+    width: max-content;
+}
+
+.projects-container .text-content * {
+    position: absolute;
+}
+
+.projects-container .text-content .project-title {
+    font-size: 2.4em;
+    border-bottom: solid gray 1px;
+    margin: 5px 15px;
+}
+
+.projects-container .text-content .project-description {
+    font-size: 1.5em;
+    margin: 15% 15px;
+    max-width: 500px;
+}
+
+.projects-container .text-content .project-github {
+    margin: 50% 15px;
+}
+
+.projects-container .text-content .fa-github::before {
+    font-size: 2em;
+    color: black;
+}
+
+
+.projects-container .project-background {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    position: absolute;
+    filter: blur(6px);
+    top: 0;
+    left: 0;
+}
+/*
+....###....##....##.####.##.....##....###....########.####..#######..##....##..######.
+...##.##...###...##..##..###...###...##.##......##.....##..##.....##.###...##.##....##
+..##...##..####..##..##..####.####..##...##.....##.....##..##.....##.####..##.##......
+.##.....##.##.##.##..##..##.###.##.##.....##....##.....##..##.....##.##.##.##..######.
+.#########.##..####..##..##.....##.#########....##.....##..##.....##.##..####.......##
+.##.....##.##...###..##..##.....##.##.....##....##.....##..##.....##.##...###.##....##
+.##.....##.##....##.####.##.....##.##.....##....##....####..#######..##....##..######.
+*/
+
+@keyframes writing-text {
+    0% {
+        width: 0ch;
+    }
+    100% {
+        width: 22ch;
+    }
 }
 
 @keyframes push-to-right {
@@ -184,6 +311,16 @@ body {
         gap: 0;
     }
 }
+
+/*
+.##.....##.########.########..####....###........#######..##.....##.########.########..####.########..######.
+.###...###.##.......##.....##..##....##.##......##.....##.##.....##.##.......##.....##..##..##.......##....##
+.####.####.##.......##.....##..##...##...##.....##.....##.##.....##.##.......##.....##..##..##.......##......
+.##.###.##.######...##.....##..##..##.....##....##.....##.##.....##.######...########...##..######....######.
+.##.....##.##.......##.....##..##..#########....##..##.##.##.....##.##.......##...##....##..##.............##
+.##.....##.##.......##.....##..##..##.....##....##....##..##.....##.##.......##....##...##..##.......##....##
+.##.....##.########.########..####.##.....##.....#####.##..#######..########.##.....##.####.########..######.
+*/
 
 @media screen and (max-width: 1440px){
     .presentation .text-content {
