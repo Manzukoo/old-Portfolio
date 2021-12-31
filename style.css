@@ -258,7 +258,7 @@ body {
 }
 
 @media screen and (max-width: 375px){
-
+  
     .presentation .name {
         font-size: 1.5em;
     }
