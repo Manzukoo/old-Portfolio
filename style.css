@@ -54,10 +54,20 @@ main {
 
 .presentation .img-content {
     margin-left: 10em;
+    position: relative;
 }
 
 .presentation .img-content .welcome-img {
     width: 900px;
+}
+
+.presentation .blob-img {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    z-index: -1;
+    animation: blob-animation 10s infinite alternate ease-in-out;
+    overflow: hidden;
 }
 
 .presentation .name {
@@ -257,6 +267,12 @@ main {
 .##.....##.##...###..##..##.....##.##.....##....##.....##..##.....##.##...###.##....##
 .##.....##.##....##.####.##.....##.##.....##....##....####..#######..##....##..######.
 */
+
+@keyframes blob-animation {
+    to {
+        transform: rotate(360deg) scale(.8);
+    }
+}
 
 @keyframes writing-text {
     0% {
