@@ -12,11 +12,17 @@ body {
     background: #273036;
     color: #ddd8d8;
     font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
     height: 100vh;
 }
 
-main {
-    scroll-snap-type: y mandatory;
+section {
+    height: 100vh;
+    scroll-snap-align: start;
 }
 
 .wave {
@@ -28,17 +34,14 @@ main {
     background-position: bottom;
     left: 0;
     top: 0;
-    scroll-snap-align: start;
 }
 
 .presentation-container {
-    scroll-snap-align: start;
     display: flex;
     justify-content: center;
     height: 100vh;
     position: relative;
     background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    position: relative;
 }
 
 .presentation {
@@ -139,7 +142,6 @@ main {
     margin-top: 6em;
     flex-direction: column;
     height: 100vh;
-    scroll-snap-align: start;
 }
 
 .projects-container .title {
