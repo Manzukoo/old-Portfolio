@@ -4,6 +4,10 @@
     box-sizing: content-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #273036;
     color: #ddd8d8;
