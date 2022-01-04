@@ -37,6 +37,7 @@ section {
 }
 
 .presentation-container {
+    scroll-snap-align: start;
     display: flex;
     justify-content: center;
     height: 100vh;
