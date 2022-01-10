@@ -12,6 +12,7 @@ body {
     background: #273036;
     color: #ddd8d8;
     font-family: "Source Sans Pro", sans-serif;
+    max-width: none;
 }
 
 .container {
@@ -74,24 +75,27 @@ section {
     top: -50%;
     left: 0;
     z-index: -1;
-    animation: blob-animation 10s infinite alternate ease-in-out;
-    overflow: hidden;
+    animation: blob-animation 10s 7s infinite alternate ease-in-out;
 }
 
 .presentation .name {
-    font-family: "Source Code Pro", Arial;
-    font-size: 2.5em;
     position: relative;
-    border-bottom: #ffffff36 solid 2px;
     height: max-content;
     width: 0;
     margin: 0 auto;
     animation: writing-text 4s .7s steps(22) forwards;
     overflow: hidden;
     white-space: nowrap;
+    font-family: "Source Code Pro", Arial;
 }
 
-.presentation .description {
+.title {
+    font-size: 2.5em;
+    font-weight: bold;
+    border-bottom: #ffffff36 solid 2px;
+}
+
+.description {
     font-size: 1.5em;
     text-align: center;
     position: relative;
@@ -103,22 +107,11 @@ section {
     justify-content: center;
 }
 
-.presentation .description p{
+.presentation .description .description-text {
+    overflow: hidden;
     opacity: 0;
     position: relative;
     margin:0 3.4px;
-}
-
-.presentation .description .welcome-msg p:first-child{
-    animation: push-to-right 4s 4s forwards;
-}
-
-.presentation .description .welcome-msg p:last-child{
-    animation: push-to-left 4s 4s forwards;
-}
-
-.presentation .description .explication p {
-    animation: appear 6s 5s forwards;
 }
 
 .presentation .down-arrows {
@@ -143,14 +136,6 @@ section {
     margin-top: 6em;
     flex-direction: column;
     height: 100vh;
-}
-
-.projects-container .title {
-    font-size: 4em;
-}
-
-.projects-container .description {
-    font-size: 1.7em;
 }
 
 .projects-container .projects-content {
@@ -320,6 +305,18 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 .##.....##.##....##.####.##.....##.##.....##....##....####..#######..##....##..######.
 */
 
+.push-to-right {
+    animation: push-to-right 4s 4s forwards;
+}
+
+.push-to-left {
+    animation: push-to-left 4s 4s forwards;
+}
+
+.appear {
+    animation: appear 6s 5s forwards;
+}
+
 @keyframes blob-animation {
     to {
         transform: rotate(360deg) scale(.8);
@@ -455,10 +452,6 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 
 @media screen and (max-width: 540px){
 
-    body {
-        width: 100%;
-    }
-
     .presentation .text-content {
         margin: auto 0;
     }
@@ -473,11 +466,11 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 
 @media screen and (max-width: 425px){
 
-    .presentation .name {
+    .title {
         font-size: 1.6em;
     }
 
-    .presentation .description p {
+    .description-text {
         font-size: .9em;
     }
 
@@ -491,11 +484,11 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 }
 
 @media screen and (max-width: 375px){
-    .presentation .name {
+    .title {
         font-size: 1.5em;
     }
 
-    .presentation .description p {
+    .description-text {
         font-size: .8em;
     }
 
@@ -511,11 +504,11 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 
 @media screen and (max-width: 320px){
 
-    .presentation .name {
+    .title {
         font-size: 1.3em;
     }
 
-    .presentation .description p {
+    .description-text {
         font-size: .7em;
     }
 
@@ -530,11 +523,11 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 
 @media screen and (max-width: 280px){
 
-    .presentation .name {
+    .title {
         font-size: 1.2em;
     }
 
-    .presentation .description p {
+    .description-text {
         font-size: .7em;
     }
 
@@ -556,11 +549,11 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 }
 
 @media screen and (min-width: 768px) and (min-height: 1024px){
-    .presentation .name {
+    .title {
         font-size: 2.1em;
     }
 
-    .presentation .description p {
+    .description-text {
         font-size: 1em;
     }
 
