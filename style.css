@@ -21,6 +21,15 @@ body {
     height: 100vh;
 }
 
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 3px;
+}
+
 section {
     height: 100vh;
     scroll-snap-align: start;
