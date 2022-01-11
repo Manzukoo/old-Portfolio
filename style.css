@@ -21,6 +21,15 @@ body {
     height: 100vh;
 }
 
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 3px;
+}
+
 section {
     height: 100vh;
     scroll-snap-align: start;
@@ -96,7 +105,7 @@ section {
     border-bottom: #ffffff36 solid 2px;
 }
 
-.description {
+.description-text {
     font-size: 1.5em;
     text-align: center;
     position: relative;
@@ -149,12 +158,61 @@ section {
     margin: auto;
 }
 
+.projects-container .projects-year-container {
+    width: 100%;
+    max-height: 600px;
+    height: 100%;
+    overflow: hidden;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    margin-top: 2em;
+}
+
+.projects-year-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.projects-year-container::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.projects-year {
+    position: relative;
+    width: 100%;
+    max-height: 600px;
+    height: 100%;
+    display: flex;
+    margin-top: 3em;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.061);
+    transition: all .2s;
+    scroll-snap-align: center;
+}
+
+.projects-container .projects-year:hover {
+    background: rgba(0, 0, 0, 0.144);
+}
+
+.projects-container .projects-info {
+    margin: auto;
+}
+
+.projects-container .project-year {
+    text-align: center;
+}
+
 .projects-container .projects {
     display: flex;
     height: 100%;
     transform: translate3d(0,0,0);
     transition: all .6s;
     animation: slider-autoplay 6.5s alternate forwards infinite;
+}
+
+.projects-test {
+    animation: none !important;   
 }
 
 .projects-container .project {
@@ -218,15 +276,20 @@ section {
     left: 0;
 }
 
+.projects-container .projects-test .project-background {
+    background: #ffffff !important;
+}
+
 .projects-container .projects-paginations {
     position: absolute;
-    bottom: 20px;
+    top: 83%;
     left: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 100%;
+    z-index: 2500;
 }
 
 .projects-container .projects-paginations label {
@@ -457,11 +520,7 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 @media screen and (max-width: 425px){
 
     .title {
-        font-size: 1.6em;
-    }
-
-    .description-text {
-        font-size: .9em;
+        font-size: 1.8em;
     }
 
     .presentation .down-arrows .fa-chevron-down::before {
