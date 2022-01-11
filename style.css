@@ -67,7 +67,8 @@ section {
 }
 
 .presentation .img-content .welcome-img {
-    width: 900px;
+    max-width: 900px;
+    width: 100%;
 }
 
 .presentation .blob-img {
@@ -477,20 +478,12 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
     .presentation .img-content {
         margin: 4em 0 0 4em;
     }
-
-    .presentation .img-content .welcome-img {
-        width: 800px;
-    }
 }
 
 @media screen and (max-width: 1024px){
 
     .presentation {
         align-items: normal;
-    }
-
-    .presentation .img-content .welcome-img {
-        width: 650px
     }
 }
 
@@ -513,9 +506,6 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
     .presentation .img-content {
         margin: auto 0;
     }
-    .presentation .img-content .welcome-img {
-        width: 500px;
-    }
 }
 
 @media screen and (max-width: 425px){
@@ -526,10 +516,6 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.9em;
-    }
-
-    .presentation .img-content .welcome-img {
-        width: 400px;
     }
 }
 
@@ -545,11 +531,6 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.7em;
     }
-
-    .presentation .img-content .welcome-img {
-        width: 360px;
-    }
-
 }
 
 @media screen and (max-width: 320px){
@@ -565,10 +546,6 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.5em;
     }
-
-    .presentation .img-content .welcome-img {
-        width: 300px;
-    }
 }
 
 @media screen and (max-width: 280px){
@@ -583,10 +560,6 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.4em;
-    }
-
-    .presentation .img-content .welcome-img {
-        width: 270px;
     }
 
     .presentation .text-content {
@@ -613,10 +586,6 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 
     .presentation .img-content {
         margin: 0 auto;
-    }
-
-    .presentation .img-content .welcome-img {
-        width: 700px;
     }
 }
 
