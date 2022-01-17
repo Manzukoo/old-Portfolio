@@ -30,7 +30,7 @@ body {
     border-radius: 3px;
 }
 
-section {
+section, main {
     height: 100vh;
     scroll-snap-align: start;
 }
