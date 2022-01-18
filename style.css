@@ -356,6 +356,10 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
     background: #fff;
 }
 
+.mylanguages-container {
+    justify-content: unset;
+}
+
 /*
 ....###....##....##.####.##.....##....###....########.####..#######..##....##..######.
 ...##.##...###...##..##..###...###...##.##......##.....##..##.....##.###...##.##....##
