@@ -421,11 +421,12 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 .card-footer {
     overflow: hidden;
     height: 20%;
-    transition: all .5s;
+    transition: all 1s;
 }
 
 .card:hover .card-footer {
     height: 100%;
+    overflow: unset;
 }
 
 .card-icon {
@@ -470,6 +471,13 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 
 .card-info {
     font-size: 1.2em;
+    opacity: 0;
+    transition: 1s all;
+    padding:0 10px;
+}
+
+.card:hover .card-info {
+    opacity: 1;
 }
 
 /*
@@ -683,10 +691,6 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.5em;
-    }
-
-    .card:hover {
-        max-height: 210px;
     }
 
     .card-footer {
