@@ -428,7 +428,8 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 }
 
 .card-icon {
-    width: 180px;
+    max-width: 180px;
+    width: 100%;
     text-align: center;
 }
 
@@ -637,6 +638,10 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.9em;
     }
+
+    .card:hover {
+        max-height: 280px;
+    }
 }
 
 @media screen and (max-width: 375px){
@@ -650,6 +655,18 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.7em;
+    }
+
+    .card:hover {
+        max-height: 250px;
+    }
+
+    .card-title {
+        font-size: 1.6em;
+    }
+    
+    .card-info {
+        font-size: 1.1em;    
     }
 }
 
@@ -665,6 +682,22 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.5em;
+    }
+
+    .card:hover {
+        max-height: 210px;
+    }
+
+    .card-footer {
+        height: 15%;
+    }
+
+    .card-title {
+        font-size: 1.4em;
+    }
+    
+    .card-info {
+        font-size: .9em;    
     }
 }
 
