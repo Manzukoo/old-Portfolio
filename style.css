@@ -63,6 +63,7 @@ section, main {
     width: 100%;
     justify-content: center;
     z-index: 1000;
+    height: 100%;
 }
 
 .presentation .text-content {
