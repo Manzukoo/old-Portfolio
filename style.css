@@ -390,10 +390,18 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
     flex-direction: column;
     align-items: center;
     transition: all .5s;
+    box-shadow:
+    0 1.8px 5.1px -16px rgba(255, 255, 255, 0.315),
+    0 6px 14.7px -16px rgba(255, 255, 255, 0.24),
+    0 27px 45px -16px rgba(128, 127, 127, 0.157);
 }
 
 .card:hover {
     max-height: 250px;
+    box-shadow:
+    0 1.8px 5.1px -16px rgba(255, 255, 255, 0.13),
+    0 6px 14.7px -16px rgba(255, 255, 255, 0.212),
+    0 27px 45px -16px rgba(255, 255, 255, 0.233);
 }
 
 .card-header {
@@ -406,7 +414,7 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
     height: 100%;
     top: 0;
     left: 0;
-    border-bottom: solid black;
+    border-bottom: solid #000000;
 }
 
 .card-footer {
@@ -439,6 +447,10 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 .card:hover .card-header::before {
     opacity: 1;
     height: 100%;
+}
+
+.card:hover .card-header {
+    border-bottom: solid #9c9c9c;
 }
 
 .card-header .card-icon::before {
