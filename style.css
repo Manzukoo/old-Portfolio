@@ -692,7 +692,7 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.5em;
     }
-
+  
     .card-footer {
         height: 15%;
     }
