@@ -21,7 +21,16 @@ body {
     height: 100vh;
 }
 
-section {
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 3px;
+}
+
+section, main {
     height: 100vh;
     scroll-snap-align: start;
 }
@@ -37,12 +46,17 @@ section {
     top: 0;
 }
 
-.presentation-container {
-    scroll-snap-align: start;
+.section-container {
     display: flex;
-    justify-content: center;
     height: 100vh;
+    justify-content: center;
     position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentation-container {
+    flex-direction: unset;
     background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
@@ -54,6 +68,7 @@ section {
     width: 100%;
     justify-content: center;
     z-index: 1000;
+    height: 100%;
 }
 
 .presentation .text-content {
@@ -129,14 +144,6 @@ section {
 .presentation .down-arrows .fa-chevron-down::before {
     font-size: 2em;
     color: black;
-}
-
-.projects-container {
-    display: flex;
-    align-items: center;
-    margin-top: 6em;
-    flex-direction: column;
-    height: 100vh;
 }
 
 .projects-container .projects-content {
@@ -547,6 +554,10 @@ input[id="PROJECT22-01"]:checked ~ .projects-paginations label[for="PROJECT22-01
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.9em;
     }
+
+    .card:hover {
+        max-height: 280px;
+    }
 }
 
 @media screen and (max-width: 375px){
@@ -560,6 +571,18 @@ input[id="PROJECT22-01"]:checked ~ .projects-paginations label[for="PROJECT22-01
 
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.7em;
+    }
+
+    .card:hover {
+        max-height: 250px;
+    }
+
+    .card-title {
+        font-size: 1.6em;
+    }
+    
+    .card-info {
+        font-size: 1.1em;    
     }
 }
 
@@ -575,6 +598,18 @@ input[id="PROJECT22-01"]:checked ~ .projects-paginations label[for="PROJECT22-01
 
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.5em;
+    }
+  
+    .card-footer {
+        height: 15%;
+    }
+
+    .card-title {
+        font-size: 1.4em;
+    }
+    
+    .card-info {
+        font-size: .9em;    
     }
 }
 
