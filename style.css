@@ -199,11 +199,14 @@ section {
     height: 100%;
     transform: translate3d(0,0,0);
     transition: all .6s;
-    animation: slider-autoplay 6.5s alternate forwards infinite;
 }
 
-.projects-test {
-    animation: none !important;   
+._2021-projects{
+    animation: slider-autoplay-3 6.5s alternate forwards infinite;
+}
+
+._2022-projects{
+    animation: slider-autoplay-2 6.5s alternate forwards infinite;
 }
 
 .projects-container .project {
@@ -265,10 +268,6 @@ section {
     filter: blur(6px);
     top: 0;
     left: 0;
-}
-
-.projects-container .projects-test .project-background {
-    background: #ffffff !important;
 }
 
 .projects-container .projects-paginations {
@@ -348,6 +347,28 @@ input[id="PROJECT21-02"]:checked ~ .projects {
 
 input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02"] {
     background: #fff;
+}
+
+input[id="PROJECT22-00"]:checked ~ .projects {
+    animation: none;
+    transform: translate3d(0,0,0);
+}
+
+input[id="PROJECT22-00"]:checked ~ .projects-paginations label[for="PROJECT22-00"] {
+    background: #16161669;
+}
+
+input[id="PROJECT22-01"]:checked ~ .projects {
+    animation: none;
+    transform: translate3d(calc(-100% * 1),0,0);
+}
+
+input[id="PROJECT22-01"]:checked ~ .projects-paginations label[for="PROJECT22-01"] {
+    background: #16161669;
+}
+
+.white,.white::before,.white::after {
+    color: #fff !important;
 }
 
 /*
@@ -448,7 +469,7 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
     }
 }
 
-@keyframes slider-autoplay {
+@keyframes slider-autoplay-3 {
     33% {
         transform: translate3d(calc(-100% * 0),0,0);
     }
@@ -457,6 +478,15 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
     }
     100% {
         transform: translate3d(calc(-100% * 2),0,0);
+    }
+}
+
+@keyframes slider-autoplay-2 {
+    0% {
+        transform: translate3d(calc(-100% * 0),0,0);
+    }
+    100% {
+        transform: translate3d(calc(-100% * 1),0,0);
     }
 }
 
