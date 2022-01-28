@@ -554,10 +554,6 @@ input[id="PROJECT22-01"]:checked ~ .projects-paginations label[for="PROJECT22-01
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.9em;
     }
-
-    .card:hover {
-        max-height: 280px;
-    }
 }
 
 @media screen and (max-width: 375px){
@@ -571,18 +567,6 @@ input[id="PROJECT22-01"]:checked ~ .projects-paginations label[for="PROJECT22-01
 
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.7em;
-    }
-
-    .card:hover {
-        max-height: 250px;
-    }
-
-    .card-title {
-        font-size: 1.6em;
-    }
-    
-    .card-info {
-        font-size: 1.1em;    
     }
 }
 
@@ -598,18 +582,6 @@ input[id="PROJECT22-01"]:checked ~ .projects-paginations label[for="PROJECT22-01
 
     .presentation .down-arrows .fa-chevron-down::before {
         font-size: 1.5em;
-    }
-  
-    .card-footer {
-        height: 15%;
-    }
-
-    .card-title {
-        font-size: 1.4em;
-    }
-    
-    .card-info {
-        font-size: .9em;    
     }
 }
 
