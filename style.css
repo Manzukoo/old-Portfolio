@@ -21,7 +21,16 @@ body {
     height: 100vh;
 }
 
-section {
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 3px;
+}
+
+section, main {
     height: 100vh;
     scroll-snap-align: start;
 }
@@ -37,12 +46,17 @@ section {
     top: 0;
 }
 
-.presentation-container {
-    scroll-snap-align: start;
+.section-container {
     display: flex;
-    justify-content: center;
     height: 100vh;
+    justify-content: center;
     position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentation-container {
+    flex-direction: unset;
     background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
@@ -97,7 +111,7 @@ section {
     border-bottom: #ffffff36 solid 2px;
 }
 
-.description {
+.description-text {
     font-size: 1.5em;
     text-align: center;
     position: relative;
@@ -132,14 +146,6 @@ section {
     color: black;
 }
 
-.projects-container {
-    display: flex;
-    align-items: center;
-    margin-top: 6em;
-    flex-direction: column;
-    height: 100vh;
-}
-
 .projects-container .projects-content {
     position: relative;
     max-width: 800px;
@@ -150,12 +156,64 @@ section {
     margin: auto;
 }
 
+.projects-container .projects-year-container {
+    width: 100%;
+    max-height: 600px;
+    height: 100%;
+    overflow: hidden;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    margin-top: 2em;
+}
+
+.projects-year-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.projects-year-container::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.projects-year {
+    position: relative;
+    width: 100%;
+    max-height: 600px;
+    height: 100%;
+    display: flex;
+    margin-top: 3em;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.061);
+    transition: all .2s;
+    scroll-snap-align: center;
+}
+
+.projects-container .projects-year:hover {
+    background: rgba(0, 0, 0, 0.144);
+}
+
+.projects-container .projects-info {
+    margin: auto;
+}
+
+.projects-container .project-year {
+    text-align: center;
+}
+
 .projects-container .projects {
     display: flex;
     height: 100%;
     transform: translate3d(0,0,0);
     transition: all .6s;
-    animation: slider-autoplay 6.5s alternate forwards infinite;
+}
+
+._2021-projects{
+    animation: slider-autoplay-3 6.5s alternate forwards infinite;
+}
+
+._2022-projects{
+    animation: slider-autoplay-2 6.5s alternate forwards infinite;
 }
 
 .projects-container .project {
@@ -221,13 +279,14 @@ section {
 
 .projects-container .projects-paginations {
     position: absolute;
-    bottom: 20px;
+    top: 83%;
     left: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 100%;
+    z-index: 2500;
 }
 
 .projects-container .projects-paginations label {
@@ -295,6 +354,28 @@ input[id="PROJECT21-02"]:checked ~ .projects {
 
 input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02"] {
     background: #fff;
+}
+
+input[id="PROJECT22-00"]:checked ~ .projects {
+    animation: none;
+    transform: translate3d(0,0,0);
+}
+
+input[id="PROJECT22-00"]:checked ~ .projects-paginations label[for="PROJECT22-00"] {
+    background: #16161669;
+}
+
+input[id="PROJECT22-01"]:checked ~ .projects {
+    animation: none;
+    transform: translate3d(calc(-100% * 1),0,0);
+}
+
+input[id="PROJECT22-01"]:checked ~ .projects-paginations label[for="PROJECT22-01"] {
+    background: #16161669;
+}
+
+.white,.white::before,.white::after {
+    color: #fff !important;
 }
 
 /*
@@ -395,7 +476,7 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
     }
 }
 
-@keyframes slider-autoplay {
+@keyframes slider-autoplay-3 {
     33% {
         transform: translate3d(calc(-100% * 0),0,0);
     }
@@ -404,6 +485,15 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
     }
     100% {
         transform: translate3d(calc(-100% * 2),0,0);
+    }
+}
+
+@keyframes slider-autoplay-2 {
+    0% {
+        transform: translate3d(calc(-100% * 0),0,0);
+    }
+    100% {
+        transform: translate3d(calc(-100% * 1),0,0);
     }
 }
 
@@ -458,11 +548,7 @@ input[id="PROJECT21-02"]:checked ~ .projects-paginations label[for="PROJECT21-02
 @media screen and (max-width: 425px){
 
     .title {
-        font-size: 1.6em;
-    }
-
-    .description-text {
-        font-size: .9em;
+        font-size: 1.8em;
     }
 
     .presentation .down-arrows .fa-chevron-down::before {

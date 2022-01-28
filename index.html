@@ -17,8 +17,8 @@
 
 <body>
     <div class="container">
-        <section>
-            <div class="presentation-container">
+        <main>
+            <div class="section-container presentation-container">
                 <div class="presentation">
                     <div class="text-content">
                         <h1 class="name title">Juan Bautista A. Rucci</h1>
@@ -45,71 +45,193 @@
                 </div>
                 <div class="wave"></div>
             </div>
+        </main>
+        <section id="mylanguages_section">
+            <div class="section-container mylanguages-container">
+                <p class="title">Mis Skills</p>
+                <div class="description"><p class="description-text">Aquí podrás ver los <strong>Lenguajes</strong>, <strong>Frameworks</strong> y <strong>Base de Datos</strong> que manejo.</p></div>
+                <div class="card-container">
+                    <img class="blob-bg" src="./img/languages-card-bg.svg" alt="Imagen de fondo para el contenedor de tarjetas de Mis Lenguajes">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="card-icon fab fa-html5"></i>
+                        </div>
+                        <div class="card-footer">
+                            <p class="card-title">HTML</p>
+                            <p class="card-info">Llevo un año y medio usando <strong>HTML</strong>. <strong><a href="#" class="card-view">ver certificado.</a></strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="card-icon fab fa-css3-alt"></i>
+                        </div>
+                        <div class="card-footer">
+                            <p class="card-title">CSS</p>
+                            <p class="card-info">Llevo un año y medio usando <strong>CSS</strong>. <strong><a href="#" class="card-view">ver certificado.</a></strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="card-icon fab fa-js-square"></i>
+                        </div>
+                        <div class="card-footer">
+                            <p class="card-title">JavaScript</p>
+                            <p class="card-info">Llevo dos años usando <strong>JS</strong>. <strong><a href="#" class="card-view">ver certificado.</a></strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="card-icon fab fa-node-js"></i>
+                        </div>
+                        <div class="card-footer">
+                            <p class="card-title">NodeJS</p>
+                            <p class="card-info">Llevo dos años usando <strong>NodeJS</strong>. <strong><a href="#" class="card-view">ver certificado.</a></strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="card-icon fab fa-bootstrap"></i>
+                        </div>
+                        <div class="card-footer">
+                            <p class="card-title">Boostrap</p>
+                            <p class="card-info">He hecho un par de proyectos con <strong>Boostrap</strong>. <strong><a href="https://manzukoo.github.io/Pagina-YPP-Manzuko/"rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="card-view">ver proyecto.</a></strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="card-icon fas fa-database"></i>
+                        </div>
+                        <div class="card-footer">
+                            <p class="card-title">MySQL</p>
+                            <p class="card-info">Llevo menos de dos años usando la base de datos <strong>MySQL</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section>
-            <div id="projects_section" class="projects-container">
+            <div id="projects_section" class="section-container projects-container">
                 <p class="title">Mis proyectos</p>
                 <div class="description"><p class="description-text">Este apartado es donde muestro mis proyectos de cada año.</p></div>
-                <div class="projects-content">
-
-                    <input type="radio" id="PROJECT21-00" name="project-slide" /hidden>
-                    <input type="radio" id="PROJECT21-01" name="project-slide" /hidden>
-                    <input type="radio" id="PROJECT21-02" name="project-slide" /hidden>
-
-                    <div class="projects">
-                        <div class="project">
-                            <div class="text-content">
-                                <div class="project-info">
-                                    <p class="project-title">Reproductor de Música</p>
-                                    <p class="project-description">Reproductor de Música sencillo.</p>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/Manzukoo/music-player" class="project-github" target="_blank"><i class="fab fa-github"></i></a>
-                                    <a class="project-page" target="_blank" href="https://manzukoo.github.io/music-player/"><i class="fas fa-external-link-square-alt"></i></a>
-                                </div>
-                            </div>
-                            <img class="project-background" alt="Imagen de fondo de la pagina de Reproductor de Musica" src="./img/projects/music-player_background.png">
+                <div class="projects-year-container">
+                    <div class="projects-year">
+                        <div class="projects-info">
+                            <p class="title project-year">2021</p>
+                            <p class="description-text year-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="project">
-                            <div class="text-content">
-                                <div class="project-info">
-                                    <p class="project-title">Tienda Web</p>
-                                    <p class="project-description">Una Tienda Web muy simple para ver los productos destacados.</p>
+                        <div class="projects-content" id="2021-PROJECTS">
+                            <input type="radio" id="PROJECT21-00" name="project-slide" /hidden>
+                            <input type="radio" id="PROJECT21-01" name="project-slide" /hidden>
+                            <input type="radio" id="PROJECT21-02" name="project-slide" /hidden>
+
+                            <div class="projects _2021-projects">
+                                <div class="project">
+                                    <div class="text-content">
+                                        <div class="project-info">
+                                            <p class="project-title">Reproductor de Música</p>
+                                            <p class="project-description">Reproductor de Música sencillo.</p>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="https://github.com/Manzukoo/music-player" class="project-github" target="_blank"><i class="fab fa-github"></i></a>
+                                            <a class="project-page" target="_blank" href="https://manzukoo.github.io/music-player/"><i class="fas fa-external-link-square-alt"></i></a>
+                                        </div>
+                                    </div>
+                                    <img class="project-background" alt="Imagen de fondo de la pagina de Reproductor de Musica" src="./img/projects/music-player_background.png">
                                 </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/Manzukoo/tienda-web" class="project-github" target="_blank"><i class="fab fa-github"></i></a>
-                                    <a class="project-page" target="_blank" href="https://manzukoo.github.io/tienda-web/"><i class="fas fa-external-link-square-alt"></i></a>
+                                <div class="project">
+                                    <div class="text-content">
+                                        <div class="project-info">
+                                            <p class="project-title">Tienda Web</p>
+                                            <p class="project-description">Una Tienda Web muy simple para ver los productos destacados.</p>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="https://github.com/Manzukoo/tienda-web" class="project-github" target="_blank"><i class="fab fa-github"></i></a>
+                                            <a class="project-page" target="_blank" href="https://manzukoo.github.io/tienda-web/"><i class="fas fa-external-link-square-alt"></i></a>
+                                        </div>
+                                    </div>
+                                    <img class="project-background" alt="Imagen de fondo de la pagina de Reproductor de Musica" src="./img/projects/mini-tienda_background.png">
+                                </div>
+                                <div class="project">
+                                    <div class="text-content">
+                                        <div class="project-info">
+                                            <p class="project-title">Pagina Yo Puedo Programar</p>
+                                            <p class="project-description">Pagina finalista del curso de Yo Puedo Programar</p>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="https://github.com/Manzukoo/Pagina-YPP-Manzuko" class="project-github" target="_blank"><i class="fab fa-github"></i></a>
+                                            <a class="project-page" target="_blank" href="https://manzukoo.github.io/Pagina-YPP-Manzuko/"><i class="fas fa-external-link-square-alt"></i></a>
+                                        </div>
+                                    </div>
+                                    <img class="project-background" alt="Imagen de fondo de la pagina de Reproductor de Musica" src="./img/projects/yppp_background.png">
                                 </div>
                             </div>
-                            <img class="project-background" alt="Imagen de fondo de la pagina de Reproductor de Musica" src="./img/projects/mini-tienda_background.png">
-                        </div>
-                        <div class="project">
-                            <div class="text-content">
-                                <div class="project-info">
-                                    <p class="project-title">Pagina Yo Puedo Programar</p>
-                                    <p class="project-description">Pagina finalista del curso de Yo Puedo Programar</p>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/Manzukoo/Pagina-YPP-Manzuko" class="project-github" target="_blank"><i class="fab fa-github"></i></a>
-                                    <a class="project-page" target="_blank" href="https://manzukoo.github.io/Pagina-YPP-Manzuko/"><i class="fas fa-external-link-square-alt"></i></a>
-                                </div>
+
+                            <div class="projects-paginations">
+                                <label for="PROJECT21-00">
+                                    <i class="fas fa-music"></i>
+                                </label>
+                                <label for="PROJECT21-01">
+                                    <i class="fas fa-store"></i>
+                                </label>
+                                <label for="PROJECT21-02">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </label>
                             </div>
-                            <img class="project-background" alt="Imagen de fondo de la pagina de Reproductor de Musica" src="./img/projects/yppp_background.png">
+
                         </div>
                     </div>
+                    <div class="projects-year">
+                        <div class="projects-info">
+                            <p class="title project-year">2022</p>
+                            <p class="description-text year-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="projects-content" id="2022-PROJECTS">
+                            <input type="radio" id="PROJECT22-00" name="project-slide" /hidden>
+                            <input type="radio" id="PROJECT22-01" name="project-slide" /hidden>
 
-                    <div class="projects-paginations">
-                        <label for="PROJECT21-00">
-                            <i class="fas fa-music"></i>
-                        </label>
-                        <label for="PROJECT21-01">
-                            <i class="fas fa-store"></i>
-                        </label>
-                        <label for="PROJECT21-02">
-                            <i class="fas fa-graduation-cap"></i>
-                        </label>
+                            <div class="projects _2022-projects">
+                                <div class="project">
+                                    <div class="text-content">
+                                        <div class="project-info">
+                                            <p class="project-title white">Calculadora</p>
+                                            <p class="project-description white">Una Calculadora Web hecha con JS.</p>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="https://manzukoo.github.io/calculadora/" class="project-github" target="_blank"><i class="fab fa-github white"></i></a>
+                                            <a class="project-page" target="_blank" href="https://github.com/Manzukoo/calculadora"><i class="fas fa-external-link-square-alt white"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="project-background">
+                                        <img class="project-background" alt="Imagen de fondo de la pagina sobre la Calculadora Web" src="./img/projects/calculator_background.png">
+                                    </div>
+                                </div>
+                                <div class="project">
+                                    <div class="text-content">
+                                        <div class="project-info">
+                                            <p class="project-title white">Cronómetro</p>
+                                            <p class="project-description white">Un Cronómetro con sus Horas, Minutos, Segundos y Milisegundos funcional.</p>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="https://manzukoo.github.io/stopwatch/" class="project-github" target="_blank"><i class="fab fa-github white"></i></a>
+                                            <a class="project-page" target="_blank" href="https://github.com/Manzukoo/stopwatch"><i class="fas fa-external-link-square-alt white"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="project-background">
+                                        <img class="project-background" alt="Imagen de fondo de la pagina sobre el Cronómetro" src="./img/projects/stopwatch_background.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="projects-paginations">
+                                <label for="PROJECT22-00">
+                                    <i class="fas fa-calculator"></i></i>
+                                </label>
+                                <label for="PROJECT22-01">
+                                    <i class="fas fa-stopwatch"></i></i>
+                                </label>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </section>
